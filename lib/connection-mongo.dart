@@ -1,8 +1,9 @@
 import "package:mongo_dart/mongo_dart.dart";
 
+
 void conexaoMongo() async {
 
-  String stringConexaoDB = "mongodb+srv://<user>:<password>@test-asdf.mongodb.net/test?retryWrites=true&w=majority";
+  String stringConexaoDB = "mongodb+srv://{$db_userName}:{$db_passWord}@cluster.1i6ypbc.mongodb.net/?appName=Cluster";
   Db? db; // Torna Db anulável e inicializa como null
 
   try {
