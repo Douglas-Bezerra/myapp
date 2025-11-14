@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import "package:myapp/sending_to_mongo.dart";
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -8,15 +9,25 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
-  void _fazerLogin() {
+  void _fazerLogin() async {
     final email = _emailController.text;
     final password = _passwordController.text;
 
     if (email.isNotEmpty && password.isNotEmpty) {
-      // TODO: Implement actual login API call and navigation
+      try {
+        await enviarDadosMongo(email, password);
+        
+
+        print("Login bem-sucedido e dados enviados.");
+      } catch (e) {
+        print("Falha ao enviar dados de login: $e");
+      }
+    } else {
+      print("Preencha todos os campos.");
     }
   }
 
