@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/login_page.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:myapp/views/tela_conversao.dart';
 
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-
-  await dotenv.load(fileName: ".env");
-
-  runApp(MyApp());
+void main() {
+  runApp(CotacoesApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class CotacoesApp extends StatelessWidget {
+  const CotacoesApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Center(child: Text("Conversor de Moedas")),
+          backgroundColor: const Color.fromARGB(255, 255, 157, 19),
+        ),
+        body: const TelaConversao(),
+      ),
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
     );
   }
 }
