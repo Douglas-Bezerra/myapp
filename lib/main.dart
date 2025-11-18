@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:myapp/views/tela_login.dart';
 
 void main() {
-  runApp(CotacoesApp());
+  runApp(ConversorMoedasApp());
 }
 
-class CotacoesApp extends StatelessWidget {
-  const CotacoesApp({super.key});
+class ConversorMoedasApp extends StatelessWidget {
+  const ConversorMoedasApp({super.key});
 
   @override
   Widget build(BuildContext context) {
