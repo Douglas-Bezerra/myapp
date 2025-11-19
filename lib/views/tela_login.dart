@@ -65,7 +65,7 @@ class _TelaLoginState extends State<TelaLogin> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                 const Padding(
-                  padding: EdgeInsets.only(top: 10.0),
+                  padding: EdgeInsets.only(top: 50.0),
                   child: Image(
                     image: AssetImage('assets/logo.png'),
                     height: 100,

@@ -61,7 +61,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
       backgroundColor: Colors.grey[300],
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(32.0),
+          padding: const EdgeInsets.all(50.0),
           child: Form(
             key: _formKey,
             child: Column(
@@ -80,7 +80,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
                 const Padding(
                   padding: EdgeInsets.all(45.0),
                   child: Text(
-                    'Seja Bem Vindo! Crie sua conta',
+                    'Bem Vindo! Crie sua conta',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 28,

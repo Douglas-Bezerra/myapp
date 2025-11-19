@@ -7,7 +7,7 @@ class CotacoesModel {
   String code;
   String codein;
   String name;
-  String high;  
+  String high;
   String low;
   String timestamp;
   String createdate;
@@ -19,7 +19,7 @@ class CotacoesModel {
     required this.high,
     required this.low,
     required this.timestamp,
-    required this.createdate
+    required this.createdate,
   });
 
   factory CotacoesModel.fromJson(Map<String, dynamic> json) => CotacoesModel(
@@ -29,7 +29,7 @@ class CotacoesModel {
     high: json["high"],
     low: json["low"],
     timestamp: json["timestamp"],
-    createdate: json["create_date"] 
+    createdate: json["create_date"],
   );
 
   Map<String, dynamic> toJson() => {
@@ -39,6 +39,6 @@ class CotacoesModel {
     "high": high,
     "low": low,
     "timestamp": timestamp,
-    "createdate": createdate
+    "createdate": createdate,
   };
 }
